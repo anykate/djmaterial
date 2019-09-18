@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="description" content="Application by Aniket Aryamane">
+    <meta name="author" content="Aniket Aryamane">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="apple-touch-icon" href="">
+
+    {% load static %}
+
+    <!-- Import materialize.css -->
+    <link type="text/css" rel="stylesheet" href="{% static 'anapp/css/vendor/materialize/materialize.min.css' %}" media="screen,projection"/>
+
+    <!-- Link to Font-Awesome CSS file -->
+    <link rel="stylesheet" href="{% static 'ANAPP/css/vendor/font-awesome/css/all.css' %}" type="text/css">
+
+    <!-- Link to your favicon.ico file -->
+    <link rel="shortcut icon" href="{% static 'ANAPP/img/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Link to your css file -->
+    <link rel="stylesheet" href="{% static 'ANAPP/css/main.css' %}" type="text/css">
+  </head>
+
+  <body>
+    {% block content %}{% endblock %}
+
+    <!-- JavaScript at end of body for optimized loading -->
+    <script type="text/javascript" src="{% static 'anapp/js/vendor/materialize/materialize.min.js' %}"></script>
+
+    <!-- JQuery comes first in the list -->
+    <script src="{% static 'ANAPP/js/vendor/jquery/jquery-3.4.1.min.js' %}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script src="{% static 'ANAPP/js/vendor/babel/babel.min.js' %}"></script>
+
+    <!-- Link to your js file -->
+    <script src="{% static 'ANAPP/js/main.js' %}"></script>
+
+    <!-- Link to your extra javascript/jquery file -->
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
